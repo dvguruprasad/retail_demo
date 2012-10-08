@@ -19,10 +19,10 @@ class TransactionsGenerator
 
     customers = users
     customer_frequency_distribution = {1..1 => 0.4, 2..3 => 0.2, 4..5 => 0.1, 6..10 => 0.2}
-    order_value_frequency_distribution = {1..500 => { :fraction_customers =>0.4, :basket_mix => [[p(tshirt,1)], [p(cap,1)], [p(ring,1), p(bracelet,1)]]}, 
-      501..2000 => { :fraction_customers =>0.3, :basket_mix => [[p(kitchen_set,1)], [p(tikkis,1)], [p(biography,1), p(cap, 1)]]}, 
-      2001..4000 => { :fraction_customers =>0.2, :basket_mix => [[p(sdcard,1), p(biography,1)], [p(watch,1), p(kitchen_set,1)], [p(linen_kurta,1), p(bracelet,1)]]}, 
-      4001..10000 => { :fraction_customers =>0.1, :basket_mix => [[p(linen_kurta,1), p(tshirt,1), p(watch,1)], [p(red_kurta,1), p(ring,1)], [p(s3, 1)]]}}
+    order_value_frequency_distribution = {1..500 => { :fraction_customers =>0.4, :basket_mix => [[product(tshirt,1)], [product(cap,1)], [product(ring,1), product(bracelet,1)]]}, 
+      501..2000 => { :fraction_customers =>0.3, :basket_mix => [[product(kitchen_set,1)], [product(tikkis,1)], [product(biography,1), product(cap, 1)]]}, 
+      2001..4000 => { :fraction_customers =>0.2, :basket_mix => [[product(sdcard,1), product(biography,1)], [product(watch,1), product(kitchen_set,1)], [product(linen_kurta,1), product(bracelet,1)]]}, 
+      4001..10000 => { :fraction_customers =>0.1, :basket_mix => [[product(linen_kurta,1), product(tshirt,1), product(watch,1)], [product(red_kurta,1), product(ring,1)], [product(s3, 1)]]}}
     recency_frequency_distribution = { 0..7 => 0.3, 8..30 => 0.5, 31..80 => 0.2}
 
     num_customers = 100
@@ -97,14 +97,13 @@ class TransactionsGenerator
   end
 
   private
-  def p(product, quantity)
+  def product(product, quantity)
     {:product => product, :quantity => quantity}
   end
 
   def by_description(name)
     product = Spree::Product.find(:first, :conditions => ["name = ?", name])
     variant = product.master
-    puts "Product name: #{name}, No. of variants: #{product.variants.count}, First master variant: #{variant}"
     product[:variant_id] = variant.id
     product[:price] = variant.price
     product

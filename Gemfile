@@ -42,3 +42,4 @@ gem 'spree_skrill'
 gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise'
 gem 'rspec'
 gem 'rspec-rails'
+gem 'spree_analytics', :path => "../spree_analytics"

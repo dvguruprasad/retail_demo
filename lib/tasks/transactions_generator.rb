@@ -92,7 +92,6 @@ class TransactionsGenerator
     Spree::LineItem.delete_all
 
     save_orders(transactions)
-    save_line_items(transactions)
     handle.close
   end
 
@@ -123,22 +122,15 @@ class TransactionsGenerator
     transactions.each do |t|
       order = build_order(t)
       order.save
-    end
-  end
-
-  def save_line_items(transactions)
-    transactions.each do |t|
       t[:basket].each do |mix|
-        line_item = build_line_item(t, mix)
+        line_item =  build_line_item(t, mix, order)
         line_item.save
-        handle.puts("#{t[:transaction_id]}, #{t[:value]/t[:basket].length}, #{t[:date]}, #{t[:transaction_id]}, #{mix[:product][:id]}, #{mix[:quantity]}")
       end
     end
   end
 
   def build_order(transaction)
     order = Spree::Order.new
-    order.id = transaction[:transaction_id] 
     order.item_total = transaction[:value]
     order.total = transaction[:value]
     order.user_id = transaction[:id] 
@@ -149,9 +141,9 @@ class TransactionsGenerator
     order
   end
 
-  def build_line_item(transaction, mix)
+  def build_line_item(transaction, mix, order)
     line_item = Spree::LineItem.new
-    line_item.order_id = transaction[:transaction_id]
+    line_item.order_id = order.id
     line_item.variant_id = mix[:product][:variant_id] 
     line_item.quantity = mix[:product][:quantity]
     line_item.price = mix[:product][:price]
@@ -160,9 +152,3 @@ class TransactionsGenerator
     line_item
   end
 end
-
-
-
-
-
-

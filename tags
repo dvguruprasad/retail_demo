@@ -136,12 +136,8 @@ SpreeZeroNineZero	db/migrate/20120924124357_spree_zero_nine_zero.spree.rb	/^clas
 StateForShipments	db/migrate/20120924124369_state_for_shipments.spree.rb	/^class StateForShipments < ActiveRecord::Migration$/;"	c
 StiForTransactions	db/migrate/20120924124388_sti_for_transactions.spree.rb	/^class StiForTransactions < ActiveRecord::Migration$/;"	c
 Transaction	db/migrate/20120924124419_migrate_transactions_to_payment_state.spree.rb	/^class Transaction < ActiveRecord::Base; end$/;"	c
-TransactionsGenerator	lib/tasks/transactions_generator.rb	/^class TransactionsGenerator$/;"	c
 UpdateCalculableTypeForPromotions	db/migrate/20120924124467_update_calculable_type_for_promotions.spree_promo.rb	/^class UpdateCalculableTypeForPromotions < ActiveRecord::Migration$/;"	c
 UpdateOrderState	db/migrate/20120924124426_update_order_state.spree.rb	/^class UpdateOrderState < ActiveRecord::Migration$/;"	c
-build_line_item	lib/tasks/transactions_generator.rb	/^  def build_line_item(transaction, mix)$/;"	f	class:TransactionsGenerator
-build_order	lib/tasks/transactions_generator.rb	/^  def build_order(transaction)$/;"	f	class:TransactionsGenerator
-by_description	lib/tasks/transactions_generator.rb	/^  def by_description(name)$/;"	f	class:TransactionsGenerator
 change	db/migrate/20120924124357_spree_zero_nine_zero.spree.rb	/^  def change$/;"	f	class:SpreeZeroNineZero
 change	db/migrate/20120924124358_create_indexes_for_inventory_units.spree.rb	/^  def change$/;"	f	class:CreateIndexesForInventoryUnits
 change	db/migrate/20120924124362_add_open_id_authentication_tables.spree.rb	/^  def change$/;"	f	class:AddOpenIdAuthenticationTables
@@ -269,18 +265,14 @@ down	db/migrate/20120924124477_rename_columns_for_devise.spree_auth.rb	/^  def d
 down	db/migrate/20120924124478_convert_user_remember_field.spree_auth.rb	/^  def down$/;"	f	class:ConvertUserRememberField
 down	db/migrate/20120924124479_make_users_email_index_unique.spree_auth.rb	/^  def down$/;"	f	class:MakeUsersEmailIndexUnique
 eligible?	db/migrate/20120924124474_content_visited_event.spree_promo.rb	/^    def eligible?(order, options = {})$/;"	f	class:ContentVisitedEvent.Spree
-generate	lib/tasks/transactions_generator.rb	/^  def generate$/;"	f	class:TransactionsGenerator
 migrate_authorized_only_transactions	db/migrate/20120924124419_migrate_transactions_to_payment_state.spree.rb	/^  def migrate_authorized_only_transactions$/;"	f	class:MigrateTransactionsToPaymentState
 migrate_completed_transactions	db/migrate/20120924124419_migrate_transactions_to_payment_state.spree.rb	/^  def migrate_completed_transactions$/;"	f	class:MigrateTransactionsToPaymentState
 migrate_credited_transactions	db/migrate/20120924124419_migrate_transactions_to_payment_state.spree.rb	/^  def migrate_credited_transactions$/;"	f	class:MigrateTransactionsToPaymentState
 migrate_purchased_transactions	db/migrate/20120924124419_migrate_transactions_to_payment_state.spree.rb	/^  def migrate_purchased_transactions$/;"	f	class:MigrateTransactionsToPaymentState
 migrate_transactions	db/migrate/20120924124419_migrate_transactions_to_payment_state.spree.rb	/^  def migrate_transactions(type)$/;"	f	class:MigrateTransactionsToPaymentState
 migrate_voided_transactions	db/migrate/20120924124419_migrate_transactions_to_payment_state.spree.rb	/^  def migrate_voided_transactions$/;"	f	class:MigrateTransactionsToPaymentState
-product	lib/tasks/transactions_generator.rb	/^  def product(product, quantity)$/;"	f	class:TransactionsGenerator
 replace_column_data	db/migrate/20120924124439_migrate_namespaced_polymorphic_models.spree.rb	/^  def replace_column_data(table_names, column_name)$/;"	f	class:MigrateNamespacedPolymorphicModels
 replace_column_data	db/migrate/20120924124472_namespace_promo_tables.spree_promo.rb	/^  def replace_column_data(table_names, column_name)$/;"	f	class:NamespacePromoTables
-save_line_items	lib/tasks/transactions_generator.rb	/^  def save_line_items(transactions)$/;"	f	class:TransactionsGenerator
-save_orders	lib/tasks/transactions_generator.rb	/^  def save_orders(transactions)$/;"	f	class:TransactionsGenerator
 up	db/migrate/20120924124359_add_count_on_hand_to_variants_and_products.spree.rb	/^  def up$/;"	f	class:AddCountOnHandToVariantsAndProducts
 up	db/migrate/20120924124360_change_taxons_to_nested_set.spree.rb	/^  def up$/;"	f	class:ChangeTaxonsToNestedSet
 up	db/migrate/20120924124361_move_to_configurable_gateways.spree.rb	/^  def up$/;"	f	class:MoveToConfigurableGateways
@@ -341,5 +333,9 @@ update_column_data	db/migrate/20120924124439_migrate_namespaced_polymorphic_mode
 update_column_data	db/migrate/20120924124472_namespace_promo_tables.spree_promo.rb	/^  def update_column_data(table_names, column_name)$/;"	f	class:NamespacePromoTables
 update_order	db/migrate/20120924124421_migrate_checkout_to_orders.spree.rb	/^    def update_order(order)$/;"	f	class:MigrateCheckoutToOrders
 update_payment	db/migrate/20120924124419_migrate_transactions_to_payment_state.spree.rb	/^  def update_payment(tx, state)$/;"	f	class:MigrateTransactionsToPaymentState
-users	lib/tasks/transactions_generator.rb	/^  def users()$/;"	f	class:TransactionsGenerator
-value	lib/tasks/transactions_generator.rb	/^  def value(basket)$/;"	f	class:TransactionsGenerator
+by_description	lib/tasks/transactions_generator.rb	/^    phone = by_description("Zen Full Touch Dual Si/
+delete	lib/tasks/transactions_generator.rb	/^        ids.delete(customer_index)$/
+if	lib/tasks/transactions_generator.rb	/^          next if (stop - t[:date] >= k.begin && s/
+new	lib/tasks/transactions_generator.rb	/^    ids = Set.new(customers)$/
+save_orders	lib/tasks/transactions_generator.rb	/^  def save_orders(transactions)$/
+value	lib/tasks/transactions_generator.rb	/^          t[:value] = value(t[:basket])$/

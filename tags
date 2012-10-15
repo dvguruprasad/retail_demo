@@ -35,7 +35,6 @@ AddSomeIndexes	db/migrate/20120924124367_add_some_indexes.spree.rb	/^class AddSo
 AddTestModeToBillingIntegration	db/migrate/20120924124383_add_test_mode_to_billing_integration.spree.rb	/^class AddTestModeToBillingIntegration < ActiveRecord::Migration$/;"	c
 Adjustment	db/migrate/20120924124393_fix_existing_coupon_credits.spree.rb	/^class Adjustment < ActiveRecord::Base; end;$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:RetailDemo
-ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
 AssignCreditcardTxnsToPayment	db/migrate/20120924124387_assign_creditcard_txns_to_payment.spree.rb	/^class AssignCreditcardTxnsToPayment < ActiveRecord::Migration$/;"	c
 AssociateShippingMethodsAndShippingCategories	db/migrate/20120924124445_associate_shipping_methods_and_shipping_categories.spree.rb	/^class AssociateShippingMethodsAndShippingCategories < ActiveRecord::Migration$/;"	c
@@ -333,9 +332,3 @@ update_column_data	db/migrate/20120924124439_migrate_namespaced_polymorphic_mode
 update_column_data	db/migrate/20120924124472_namespace_promo_tables.spree_promo.rb	/^  def update_column_data(table_names, column_name)$/;"	f	class:NamespacePromoTables
 update_order	db/migrate/20120924124421_migrate_checkout_to_orders.spree.rb	/^    def update_order(order)$/;"	f	class:MigrateCheckoutToOrders
 update_payment	db/migrate/20120924124419_migrate_transactions_to_payment_state.spree.rb	/^  def update_payment(tx, state)$/;"	f	class:MigrateTransactionsToPaymentState
-by_description	lib/tasks/transactions_generator.rb	/^    phone = by_description("Zen Full Touch Dual Si/
-delete	lib/tasks/transactions_generator.rb	/^        ids.delete(customer_index)$/
-if	lib/tasks/transactions_generator.rb	/^          next if (stop - t[:date] >= k.begin && s/
-new	lib/tasks/transactions_generator.rb	/^    ids = Set.new(customers)$/
-save_orders	lib/tasks/transactions_generator.rb	/^  def save_orders(transactions)$/
-value	lib/tasks/transactions_generator.rb	/^          t[:value] = value(t[:basket])$/

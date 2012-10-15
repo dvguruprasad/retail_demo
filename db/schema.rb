@@ -11,7 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120924124479) do
+ActiveRecord::Schema.define(:version => 20121015070919) do
+
+  create_table "product_views", :id => false, :force => true do |t|
+    t.string  "variant_id",   :limit => 50
+    t.integer "times_viewed"
+  end
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -466,6 +471,12 @@ ActiveRecord::Schema.define(:version => 20120924124479) do
     t.integer "country_id"
   end
 
+  create_table "spree_substitutions", :id => false, :force => true do |t|
+    t.integer "looked_up_variant",                                  :null => false
+    t.integer "substitute_variant",                                 :null => false
+    t.decimal "probability",        :precision => 20, :scale => 20
+  end
+
   create_table "spree_tax_categories", :force => true do |t|
     t.string   "name"
     t.string   "description"
@@ -527,6 +538,15 @@ ActiveRecord::Schema.define(:version => 20120924124479) do
     t.boolean  "active",       :default => true
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
+  end
+
+  create_table "spree_user_behaviors", :force => true do |t|
+    t.string   "session_id"
+    t.string   "user_id"
+    t.string   "action"
+    t.string   "parameters"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "spree_users", :force => true do |t|
@@ -591,6 +611,12 @@ ActiveRecord::Schema.define(:version => 20120924124479) do
     t.datetime "updated_at",                            :null => false
     t.boolean  "default_tax",        :default => false
     t.integer  "zone_members_count", :default => 0
+  end
+
+  create_table "substitution_behavior", :id => false, :force => true do |t|
+    t.string "looked_for_variant", :limit => 50
+    t.string "bought_variant",     :limit => 50
+    t.string "session_id",         :limit => 50
   end
 
 end

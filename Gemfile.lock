@@ -87,6 +87,8 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (2.6.4)
+      activesupport (>= 2.3.9)
     ffaker (1.12.1)
     gyoku (0.4.6)
       builder (>= 2.1.2)
@@ -260,6 +262,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  factory_girl
   jquery-rails
   mysql2
   rails (= 3.2.8)

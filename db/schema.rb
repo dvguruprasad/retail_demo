@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121017084833) do
+ActiveRecord::Schema.define(:version => 20121017130520) do
 
   create_table "product_views", :id => false, :force => true do |t|
     t.string  "variant_id",   :limit => 50
@@ -471,6 +471,14 @@ ActiveRecord::Schema.define(:version => 20121017084833) do
     t.integer "country_id"
   end
 
+  create_table "spree_substitution_counts", :force => true do |t|
+    t.integer  "searched_product"
+    t.integer  "bought_product"
+    t.integer  "count",            :default => 0
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
+
   create_table "spree_substitutions", :id => false, :force => true do |t|
     t.integer "looked_up_variant",                                  :null => false
     t.integer "substitute_variant",                                 :null => false
@@ -611,20 +619,6 @@ ActiveRecord::Schema.define(:version => 20121017084833) do
     t.datetime "updated_at",                            :null => false
     t.boolean  "default_tax",        :default => false
     t.integer  "zone_members_count", :default => 0
-  end
-
-  create_table "substitution_behavior", :id => false, :force => true do |t|
-    t.string "looked_for_variant", :limit => 50
-    t.string "bought_variant",     :limit => 50
-    t.string "session_id",         :limit => 50
-  end
-
-  create_table "substitution_count", :force => true do |t|
-    t.integer  "searched_product"
-    t.integer  "bought_product"
-    t.integer  "count"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
   end
 
 end

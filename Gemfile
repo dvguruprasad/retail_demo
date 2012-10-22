@@ -44,3 +44,4 @@ gem 'rspec'
 gem 'rspec-rails'
 gem 'spree_analytics', :path => "../spree_analytics"
 gem 'factory_girl'
+gem 'capistrano'

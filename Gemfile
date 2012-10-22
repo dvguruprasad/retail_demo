@@ -12,15 +12,25 @@ gem 'mysql2'
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+end
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+group :test do
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'factory_girl'
+end
 
-  gem 'uglifier', '>= 1.0.3'
+if ENV['RAILS_ENV'] == "test"
+  gem 'spree_analytics', :git => "git@github.com:dvguruprasad/spree_analytics.git"
+else
+  gem 'spree_analytics', :path => "../spree_analytics"
 end
 
 gem 'jquery-rails'
+gem 'spree', '1.2.0'
+gem 'spree_usa_epay'
+gem 'spree_skrill'
+gem 'capistrano'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -36,12 +46,3 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
-gem 'spree', '1.2.0'
-gem 'spree_usa_epay'
-gem 'spree_skrill'
-gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise'
-gem 'rspec'
-gem 'rspec-rails'
-gem 'spree_analytics', :path => "../spree_analytics"
-gem 'factory_girl'
-gem 'capistrano'

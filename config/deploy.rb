@@ -2,10 +2,9 @@ set :application, "Retail Demo"
 set :repository,  "git@github.com:dvguruprasad/retail_demo.git"
 
 set :scm, :git
+set :deploy_to, "/var/www"
 
-role :web, "spree-demo.corporate.thoughtworks.com"                          # Your HTTP server, Apache/etc
-role :app, "spree-demo.corporate.thoughtworks.com"                          # This may be the same as your `Web` server
-role :db, "spree-demo.corporate.thoughtworks.com" , :primary => true # This is where Rails migrations will run
+server "spree-demo.corporate.thoughtworks.com", :app, :web, :db, :primary => true
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"

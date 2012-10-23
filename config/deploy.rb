@@ -3,6 +3,7 @@ set :repository,  "git@github.com:dvguruprasad/retail_demo.git"
 
 set :scm, :git
 set :deploy_to, "/var/www"
+set :deploy_via, :remote_cache
 
 server "spree-demo.corporate.thoughtworks.com", :app, :web, :db, :primary => true
 

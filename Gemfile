@@ -34,6 +34,7 @@ gem 'jquery-rails'
 gem 'spree', '1.2.0'
 gem 'spree_usa_epay'
 gem 'spree_skrill'
+gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise'
 gem 'capistrano'
 
 # To use ActiveModel has_secure_password

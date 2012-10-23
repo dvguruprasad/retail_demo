@@ -109,7 +109,7 @@ class TransactionsGenerator
   end
 
   def users()
-    Spree::User.find(:all).map{|user| user.id}
+    Spree.user_class.find(:all).map{|user| user.id}
   end
 
   def value(basket)

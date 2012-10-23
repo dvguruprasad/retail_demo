@@ -11,7 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121023164009) do
+ActiveRecord::Schema.define(:version => 20121023175408) do
+
+  create_table "product_views", :id => false, :force => true do |t|
+    t.string  "variant_id",   :limit => 50
+    t.integer "times_viewed"
+  end
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -474,6 +479,14 @@ ActiveRecord::Schema.define(:version => 20121023164009) do
     t.datetime "updated_at",                      :null => false
   end
 
+  create_table "spree_substitution_probabilities", :force => true do |t|
+    t.integer  "searched_product"
+    t.integer  "bought_product"
+    t.float    "probability"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
   create_table "spree_tax_categories", :force => true do |t|
     t.string   "name"
     t.string   "description"
@@ -609,6 +622,12 @@ ActiveRecord::Schema.define(:version => 20121023164009) do
     t.datetime "updated_at",                            :null => false
     t.boolean  "default_tax",        :default => false
     t.integer  "zone_members_count", :default => 0
+  end
+
+  create_table "substitution_behavior", :id => false, :force => true do |t|
+    t.string "looked_for_variant", :limit => 50
+    t.string "bought_variant",     :limit => 50
+    t.string "session_id",         :limit => 50
   end
 
 end

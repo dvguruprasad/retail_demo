@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121024060353) do
+ActiveRecord::Schema.define(:version => 20121029054019) do
 
   create_table "SPREE_USER_BEHAVIORS", :force => true do |t|
     t.string   "session_id", :limit => 200

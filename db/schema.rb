@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121029054019) do
+ActiveRecord::Schema.define(:version => 20121029120641) do
 
   create_table "SPREE_USER_BEHAVIORS", :force => true do |t|
     t.string   "session_id", :limit => 200
@@ -485,6 +485,7 @@ ActiveRecord::Schema.define(:version => 20121029054019) do
     t.integer  "count",            :default => 0
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
+    t.string   "type"
   end
 
   create_table "spree_substitution_probabilities", :force => true do |t|
@@ -637,6 +638,7 @@ ActiveRecord::Schema.define(:version => 20121029054019) do
 
   create_table "substitution_identification_timestamp", :force => true do |t|
     t.datetime "value"
+    t.string   "type"
   end
 
 end

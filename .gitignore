@@ -15,5 +15,6 @@
 /tmp
 .rvmrc
 tags
-**/*.DS_Store
+/.idea
+*.DS_Store
 public/assets

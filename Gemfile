@@ -24,10 +24,10 @@ group :test do
   gem 'factory_girl'
 end
 
-if ENV['RAILS_ENV'] == "test"
-  gem 'spree_analytics', :git => "git@github.com:dvguruprasad/spree_analytics.git"
-else
+if ENV['RAILS_ENV'] != "test"
   gem 'spree_analytics', :path => "../spree_analytics"
+else
+  gem 'spree_analytics', :git => "git@github.com:dvguruprasad/spree_analytics.git"
 end
 
 #gem 'jquery-rails'
@@ -38,6 +38,8 @@ gem 'spree_usa_epay'
 gem 'spree_skrill'
 gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise'
 gem 'capistrano'
+gem 'capistrano-ext'
+gem 'rvm-capistrano'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -73,6 +73,8 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
+    capistrano-ext (1.2.1)
+      capistrano (>= 1.0.0)
     cocaine (0.3.1)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -195,6 +197,8 @@ GEM
       activesupport (>= 3.0)
       railties (>= 3.0)
       rspec (~> 2.11.0)
+    rvm-capistrano (1.2.7)
+      capistrano (>= 2.0.0)
     sass (3.2.1)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -281,6 +285,7 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano
+  capistrano-ext
   coffee-rails (~> 3.2.1)
   factory_girl
   jquery-ui-rails
@@ -288,6 +293,7 @@ DEPENDENCIES
   rails (= 3.2.8)
   rspec
   rspec-rails
+  rvm-capistrano
   sass-rails (~> 3.2.3)
   spree (= 1.2.0)
   spree_analytics!

@@ -18,3 +18,4 @@ tags
 /.idea
 *.DS_Store
 public/assets
+public/spree/products

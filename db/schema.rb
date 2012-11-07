@@ -11,15 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121030063535) do
-
-  create_table "SPREE_USER_BEHAVIORS", :force => true do |t|
-    t.string   "session_id", :limit => 200
-    t.string   "user_id",    :limit => 50
-    t.string   "action",     :limit => 200
-    t.datetime "created_at"
-    t.string   "parameters"
-  end
+ActiveRecord::Schema.define(:version => 20121106120915) do
 
   create_table "product_views", :id => false, :force => true do |t|
     t.string  "variant_id",   :limit => 50
@@ -521,6 +513,13 @@ ActiveRecord::Schema.define(:version => 20121030063535) do
     t.boolean  "included_in_price",                               :default => false
   end
 
+  create_table "spree_taxon_configurations", :force => true do |t|
+    t.integer "taxon_id"
+    t.string  "recommendation_type"
+  end
+
+  add_index "spree_taxon_configurations", ["taxon_id"], :name => "fk_taxon"
+
   create_table "spree_taxonomies", :force => true do |t|
     t.string   "name",       :null => false
     t.datetime "created_at", :null => false
@@ -564,6 +563,15 @@ ActiveRecord::Schema.define(:version => 20121030063535) do
     t.boolean  "active",       :default => true
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
+  end
+
+  create_table "spree_user_behaviors", :force => true do |t|
+    t.string   "session_id"
+    t.string   "user_id"
+    t.string   "action"
+    t.string   "parameters"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "spree_users", :force => true do |t|

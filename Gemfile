@@ -30,7 +30,9 @@ else
   gem 'spree_analytics', :path => "../spree_analytics"
 end
 
-gem 'jquery-rails'
+#gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
 gem 'spree', '1.2.0'
 gem 'spree_usa_epay'
 gem 'spree_skrill'

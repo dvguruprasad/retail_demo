@@ -1,0 +1,149 @@
+wine_variety_type_1,wine_variety_type_2,wine_type,score
+Red Bordeaux Blend,Red Bordeaux Blend,Red,1
+Merlot,Merlot,Red,1
+Cabernet Sauvignon,Cabernet Sauvignon,Red,1
+Red Blend,Red Blend,Red,1
+Shiraz/Syrah,Shiraz/Syrah,Red,1
+Cabernet Franc,Cabernet Franc,Red,1
+Alicante Bouschet,Alicante Bouschet,Red,1
+Shiraz/Syrah-Grenache/Garnacha Blend,Shiraz/Syrah-Grenache/Garnacha Blend,Red,1
+Pinot Noir,Pinot Noir,Red,1
+Nebbiolo,Nebbiolo,Red,1
+Corvina,Corvina,Red,1
+Tempranillo/Tinto Fino/Tinta Roriz,Tempranillo/Tinto Fino/Tinta Roriz,Red,1
+Merlot,Red Bordeaux Blend,Red,0.75
+Cabernet Sauvignon,Red Bordeaux Blend,Red,0.75
+Red Blend,Red Bordeaux Blend,Red,0.75
+Shiraz/Syrah,Red Bordeaux Blend,Red,0.5
+Cabernet Franc,Red Bordeaux Blend,Red,0.75
+Alicante Bouschet,Red Bordeaux Blend,Red,0.65
+Shiraz/Syrah-Grenache/Garnacha Blend,Red Bordeaux Blend,Red,0.5
+Pinot Noir,Red Bordeaux Blend,Red,0.65
+Nebbiolo,Red Bordeaux Blend,Red,0.75
+Corvina,Red Bordeaux Blend,Red,0.5
+Tempranillo/Tinto Fino/Tinta Roriz,Red Bordeaux Blend,Red,0.5
+Cabernet Sauvignon,Merlot,Red,0.84
+Red Blend,Merlot,Red,0.5
+Shiraz/Syrah,Merlot,Red,0.56
+Cabernet Franc,Merlot,Red,0.79
+Alicante Bouschet,Merlot,Red,0.68
+Shiraz/Syrah-Grenache/Garnacha Blend,Merlot,Red,0.5
+Pinot Noir,Merlot,Red,0.63
+Nebbiolo,Merlot,Red,0.79
+Corvina,Merlot,Red,0.5
+Tempranillo/Tinto Fino/Tinta Roriz,Merlot,Red,0.5
+Red Blend,Cabernet Sauvignon,Red,0.5
+Shiraz/Syrah,Cabernet Sauvignon,Red,0.6
+Cabernet Franc,Cabernet Sauvignon,Red,0.86
+Alicante Bouschet,Cabernet Sauvignon,Red,0.57
+Shiraz/Syrah-Grenache/Garnacha Blend,Cabernet Sauvignon,Red,0.5
+Pinot Noir,Cabernet Sauvignon,Red,0.67
+Nebbiolo,Cabernet Sauvignon,Red,0.73
+Corvina,Cabernet Sauvignon,Red,0.5
+Tempranillo/Tinto Fino/Tinta Roriz,Cabernet Sauvignon,Red,0.5
+Shiraz/Syrah,Red Blend,Red,0.5
+Cabernet Franc,Red Blend,Red,0.5
+Alicante Bouschet,Red Blend,Red,0.5
+Shiraz/Syrah-Grenache/Garnacha Blend,Red Blend,Red,0.5
+Pinot Noir,Red Blend,Red,0.5
+Nebbiolo,Red Blend,Red,0.5
+Corvina,Red Blend,Red,0.5
+Tempranillo/Tinto Fino/Tinta Roriz,Red Blend,Red,0.5
+Cabernet Franc,Shiraz/Syrah,Red,0.45
+Alicante Bouschet,Shiraz/Syrah,Red,0.58
+Shiraz/Syrah-Grenache/Garnacha Blend,Shiraz/Syrah,Red,0.5
+Pinot Noir,Shiraz/Syrah,Red,0.74
+Nebbiolo,Shiraz/Syrah,Red,0.75
+Corvina,Shiraz/Syrah,Red,0.5
+Tempranillo/Tinto Fino/Tinta Roriz,Shiraz/Syrah,Red,0.5
+Alicante Bouschet,Cabernet Franc,Red,0.62
+Shiraz/Syrah-Grenache/Garnacha Blend,Cabernet Franc,Red,0.5
+Pinot Noir,Cabernet Franc,Red,0.57
+Nebbiolo,Cabernet Franc,Red,0.68
+Corvina,Cabernet Franc,Red,0.5
+Tempranillo/Tinto Fino/Tinta Roriz,Cabernet Franc,Red,0.5
+Shiraz/Syrah-Grenache/Garnacha Blend,Alicante Bouschet,Red,0.5
+Pinot Noir,Alicante Bouschet,Red,0.7
+Nebbiolo,Alicante Bouschet,Red,0.62
+Corvina,Alicante Bouschet,Red,0.5
+Tempranillo/Tinto Fino/Tinta Roriz,Alicante Bouschet,Red,0.5
+Pinot Noir,Shiraz/Syrah-Grenache/Garnacha Blend,Red,0.67
+Nebbiolo,Shiraz/Syrah-Grenache/Garnacha Blend,Red,0.5
+Corvina,Shiraz/Syrah-Grenache/Garnacha Blend,Red,0.5
+Tempranillo/Tinto Fino/Tinta Roriz,Shiraz/Syrah-Grenache/Garnacha Blend,Red,0.5
+Nebbiolo,Pinot Noir,Red,0.71
+Corvina,Pinot Noir,Red,0.5
+Tempranillo/Tinto Fino/Tinta Roriz,Pinot Noir,Red,0.5
+Corvina,Nebbiolo,Red,0.5
+Tempranillo/Tinto Fino/Tinta Roriz,Nebbiolo,Red,0.5
+Tempranillo/Tinto Fino/Tinta Roriz,Corvina,Red,0.5
+Muscat,Muscat,White,1
+Chardonnay,Chardonnay,White,1
+Riesling,Riesling,White,1
+Sauvignon Blanc,Sauvignon Blanc,White,1
+Pinot Gris,Pinot Gris,White,1
+Chenin Blanc,Chenin Blanc,White,1
+White Rhone Blend,White Rhone Blend,White,1
+SǸmillon-Sauvignon Blanc Blend,SǸmillon-Sauvignon Blanc Blend,White,1
+Chardonnay,Muscat,White,0.72
+Riesling,Muscat,White,0.61
+Sauvignon Blanc,Muscat,White,0.74
+Pinot Gris,Muscat,White,0.77
+Chenin Blanc,Muscat,White,0.7
+White Rhone Blend,Muscat,White,0.5
+SǸmillon-Sauvignon Blanc Blend,Muscat,White,0.5
+Riesling,Chardonnay,White,0.8
+Sauvignon Blanc,Chardonnay,White,0.76
+Pinot Gris,Chardonnay,White,0.84
+Chenin Blanc,Chardonnay,White,0.8
+White Rhone Blend,Chardonnay,White,0.5
+SǸmillon-Sauvignon Blanc Blend,Chardonnay,White,0.78
+Sauvignon Blanc,Riesling,White,0.77
+Pinot Gris,Riesling,White,0.67
+Chenin Blanc,Riesling,White,0.68
+White Rhone Blend,Riesling,White,0.5
+SǸmillon-Sauvignon Blanc Blend,Riesling,White,0.5
+Pinot Gris,Sauvignon Blanc,White,0.81
+Chenin Blanc,Sauvignon Blanc,White,0.82
+White Rhone Blend,Sauvignon Blanc,White,0.5
+SǸmillon-Sauvignon Blanc Blend,Sauvignon Blanc,White,0.5
+Chenin Blanc,Pinot Gris,White,0.9
+White Rhone Blend,Pinot Gris,White,0.5
+SǸmillon-Sauvignon Blanc Blend,Pinot Gris,White,0.5
+White Rhone Blend,Chenin Blanc,White,0.5
+SǸmillon-Sauvignon Blanc Blend,Chenin Blanc,White,0.5
+SǸmillon-Sauvignon Blanc Blend,White Rhone Blend,White,0.5
+Cabernet Franc,Cabernet Franc,Rose,1
+Merlot,Merlot,Rose,1
+Cabernet Sauvignon Blend,Cabernet Sauvignon Blend,Rose,1
+Rose Blend,Rose Blend,Rose,1
+Pinot Noir,Pinot Noir,Rose,1
+Southern Rhone Blend,Southern Rhone Blend,Rose,1
+Malbec,Malbec,Rose,1
+Merlot,Cabernet Franc,Rose,0.79
+Cabernet Sauvignon Blend,Cabernet Franc,Rose,0.8
+Rose Blend,Cabernet Franc,Rose,0.5
+Pinot Noir,Cabernet Franc,Rose,0.57
+Southern Rhone Blend,Cabernet Franc,Rose,0.5
+Malbec,Cabernet Franc,Rose,0.5
+Cabernet Sauvignon Blend,Merlot,Rose,0.8
+Rose Blend,Merlot,Rose,0.5
+Pinot Noir,Merlot,Rose,0.63
+Southern Rhone Blend,Merlot,Rose,0.5
+Malbec,Merlot,Rose,0.5
+Rose Blend,Cabernet Sauvignon Blend,Rose,0.5
+Pinot Noir,Cabernet Sauvignon Blend,Rose,0.65
+Southern Rhone Blend,Cabernet Sauvignon Blend,Rose,0.5
+Malbec,Cabernet Sauvignon Blend,Rose,0.5
+Pinot Noir,Rose Blend,Rose,0.5
+Southern Rhone Blend,Rose Blend,Rose,0.5
+Malbec,Rose Blend,Rose,0.5
+Southern Rhone Blend,Pinot Noir,Rose,0.5
+Malbec,Pinot Noir,Rose,0.5
+Malbec,Southern Rhone Blend,Rose,0.5
+Champagne Blend,Champagne Blend,White-Sparkling,1
+Chardonnay,Chardonnay,White-Sparkling,1
+Pinot Noir,Pinot Noir,White-Sparkling,1
+Chardonnay,Champagne Blend,White-Sparkling,0.5
+Pinot Noir,Champagne Blend,White-Sparkling,0.5
+Pinot Noir,Chardonnay,White-Sparkling,0.84

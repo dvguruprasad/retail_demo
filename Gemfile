@@ -30,9 +30,10 @@ else
   gem 'spree_analytics', :git => "git@github.com:dvguruprasad/spree_analytics.git"
 end
 
-#gem 'jquery-rails'
-gem 'jquery-ui-rails'
+gem 'jquery-rails'
+gem 'haml-rails'
 
+gem 'jquery-ui-rails'
 gem 'spree', '1.2.0'
 gem 'spree_usa_epay'
 gem 'spree_skrill'

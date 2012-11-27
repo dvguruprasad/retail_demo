@@ -17,5 +17,5 @@ set :repository,  "git@github.com:dvguruprasad/retail_demo.git"
 set :scm, :git
 set :deploy_to, "/var/www/#{application}"
 set :deploy_via, :remote_cache
-set :branch, "wip"
+set :branch, "master"
 default_run_options[:pty] = true

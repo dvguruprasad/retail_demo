@@ -9,9 +9,10 @@ ENV["RAILS_ENV"] ||= "test"
 
 namespace :deploy do
   task :start do
-    run  <<-CMD
-        cd #{deploy_to}/current; RAILS_ENV=#{ENV["RAILS_ENV"]} bundle exec rails s -p 3001
+    command = <<-CMD
+        cd #{deploy_to}/current; export RAILS_ENV=test; echo 'bundle exec rails s' | at now
     CMD
+    run command, :pty => true
   end
 
   task :stop do
@@ -29,7 +30,7 @@ namespace :deploy do
   end
 
   task :migrate do
-    run "cd /var/www/retail_demo/releases/20121116041137 && RAILS_ENV=#{ENV["RAILS_ENV"]} bundle exec rake db:migrate"
+    run "cd #{release_path} && RAILS_ENV=#{ENV["RAILS_ENV"]} bundle exec rake db:migrate"
   end
 
   task :symlink_shared do
@@ -41,7 +42,7 @@ end
 namespace :bundle do
   task :install do
     run <<-CMD
-      cd #{release_path} && RAILS_ENV=#{ENV["RAILS_ENV"]} bundle install --gemfile #{release_path}/Gemfile --path #{shared_path}/bundle
+      cd #{release_path} && RAILS_ENV=#{ENV["RAILS_ENV"]} bundle install --gemfile #{release_path}/Gemfile
     CMD
   end
 end

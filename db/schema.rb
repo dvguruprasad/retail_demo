@@ -11,11 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121116092501) do
+ActiveRecord::Schema.define(:version => 20121127050633) do
 
   create_table "product_views", :id => false, :force => true do |t|
     t.string  "variant_id",   :limit => 50
     t.integer "times_viewed"
+  end
+
+  create_table "recommendation_identification_timestamps", :force => true do |t|
+    t.datetime "value"
+    t.string   "type"
   end
 
   create_table "spree_activators", :force => true do |t|
@@ -95,6 +100,13 @@ ActiveRecord::Schema.define(:version => 20121116092501) do
     t.string   "calculable_type", :null => false
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "spree_cf_recommendations", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "product_ids", :limit => 1000
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "spree_configurations", :force => true do |t|
@@ -282,6 +294,16 @@ ActiveRecord::Schema.define(:version => 20121116092501) do
   end
 
   add_index "spree_preferences", ["key"], :name => "index_spree_preferences_on_key", :unique => true
+
+  create_table "spree_product_buy_counts", :force => true do |t|
+    t.integer  "count"
+    t.integer  "user_id"
+    t.integer  "product_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "spree_product_buy_counts", ["user_id"], :name => "fk_user_constraint"
 
   create_table "spree_product_option_types", :force => true do |t|
     t.integer  "position"
@@ -567,9 +589,17 @@ ActiveRecord::Schema.define(:version => 20121116092501) do
 
   create_table "spree_user_behaviors", :force => true do |t|
     t.string   "session_id"
-    t.string   "user_id"
+    t.integer  "user_id"
     t.string   "action"
     t.string   "parameters"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "spree_user_similarity_scores", :force => true do |t|
+    t.integer  "user1_id"
+    t.integer  "user2_id"
+    t.float    "score"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -643,11 +673,6 @@ ActiveRecord::Schema.define(:version => 20121116092501) do
     t.string "looked_for_variant", :limit => 50
     t.string "bought_variant",     :limit => 50
     t.string "session_id",         :limit => 50
-  end
-
-  create_table "substitution_identification_timestamp", :force => true do |t|
-    t.datetime "value"
-    t.string   "type"
   end
 
   create_table "wine_type_similarity_scores", :force => true do |t|

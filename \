@@ -1,5 +1,0 @@
-require "#{File.expand_path(File.dirname(__FILE__))}/scripts/clean_order_data.sql"
-sql = File.open("some.sql").read
-sql.split(';').each do |sql_statement|
-  ActiveRecord::Base.connection.execute(sql_statement)
-end

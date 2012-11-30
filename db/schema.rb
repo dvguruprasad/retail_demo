@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121127050633) do
+ActiveRecord::Schema.define(:version => 20121129093715) do
 
   create_table "product_views", :id => false, :force => true do |t|
     t.string  "variant_id",   :limit => 50
@@ -153,6 +153,14 @@ ActiveRecord::Schema.define(:version => 20121127050633) do
     t.boolean  "test_mode",   :default => true
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+  end
+
+  create_table "spree_inventory_replenishments", :force => true do |t|
+    t.integer  "product_id"
+    t.date     "replenishment_date"
+    t.integer  "quantity"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "spree_inventory_units", :force => true do |t|
@@ -322,6 +330,28 @@ ActiveRecord::Schema.define(:version => 20121127050633) do
   end
 
   add_index "spree_product_properties", ["product_id"], :name => "index_product_properties_on_product_id"
+
+  create_table "spree_product_weekly_inventory_positions", :force => true do |t|
+    t.integer  "product_id"
+    t.date     "week_start_date"
+    t.date     "week_end_date"
+    t.integer  "closing_position"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "spree_product_weekly_sales", :force => true do |t|
+    t.integer  "product_id"
+    t.date     "week_start_date"
+    t.date     "week_end_date"
+    t.integer  "sales_units"
+    t.float    "revenue"
+    t.integer  "target_sales_units"
+    t.float    "target_revenue"
+    t.float    "cost"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
 
   create_table "spree_products", :force => true do |t|
     t.string   "name",                 :default => "", :null => false
@@ -541,6 +571,19 @@ ActiveRecord::Schema.define(:version => 20121127050633) do
   end
 
   add_index "spree_taxon_configurations", ["taxon_id"], :name => "fk_taxon"
+
+  create_table "spree_taxon_weekly_sales", :force => true do |t|
+    t.integer  "taxon_id"
+    t.date     "week_start_date"
+    t.date     "week_end_date"
+    t.integer  "sales_units"
+    t.float    "revenue"
+    t.integer  "target_sales_units"
+    t.float    "target_revenue"
+    t.float    "cost"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
 
   create_table "spree_taxonomies", :force => true do |t|
     t.string   "name",       :null => false

@@ -1,7 +1,7 @@
 # This migration comes from spree_analytics (originally 20121130092111)
-class CreateProductWeeklyForecastedSales < ActiveRecord::Migration
+class CreateProductWeeklySalesForecasts < ActiveRecord::Migration
   def change
-      create_table :spree_product_weekly_forecasted_sales do |table|
+      create_table :spree_product_weekly_sales_forecasts do |table|
           table.integer :product_id
           table.date :week_start_date
           table.date :week_end_date

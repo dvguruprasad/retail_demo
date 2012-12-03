@@ -30,7 +30,7 @@ namespace :deploy do
   end
 
   task :migrate do
-    run "cd #{release_path} && RAILS_ENV=#{ENV["RAILS_ENV"]} bundle exec rake db:migrate"
+    run "cd #{current_path} && RAILS_ENV=#{ENV["RAILS_ENV"]} bundle exec rake db:migrate"
   end
 
   task :symlink_shared do

@@ -26,7 +26,7 @@ end
 
 if ENV['RAILS_ENV'] != "test"
   gem 'spree_analytics', :path => "../spree_analytics"
-  gem 'spree_category_analysis' :path => "../spree_category_analysis"
+  gem 'spree_category_analysis', :path => "../spree_category_analysis"
 else
   gem 'spree_analytics', :git => "git@github.com:dvguruprasad/spree_analytics.git"
   gem 'spree_category_analysis', :git => "git@github.com:dvguruprasad/spree_category_analysis.git"

@@ -13,6 +13,12 @@ PATH
     spree_analytics (1.2.0)
       spree_core (~> 1.2.0)
 
+PATH
+  remote: ../spree_category_analysis
+  specs:
+    spree_category_analysis (1.2.0)
+      spree_core (~> 1.2.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -306,6 +312,7 @@ DEPENDENCIES
   spree (= 1.2.0)
   spree_analytics!
   spree_auth_devise!
+  spree_category_analysis!
   spree_skrill
   spree_usa_epay
   therubyracer

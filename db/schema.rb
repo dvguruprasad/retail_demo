@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121201091501) do
+ActiveRecord::Schema.define(:version => 20121203064035) do
 
   create_table "product_views", :id => false, :force => true do |t|
     t.string  "variant_id",   :limit => 50

@@ -1,4 +1,5 @@
 require 'csv'
+require 'spree/admin'
 
 class ProductWeeklySalesPopulator
   def initialize(csv_file)

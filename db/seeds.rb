@@ -3,6 +3,7 @@ require 'seed/wine_varietal_similarity_scores_populator'
 require 'seed/taxon_configuration_populator'
 require 'seed/product_weekly_sales_populator'
 require 'seed/product_weekly_sales_forecasts_populator'
+require 'seed/product_weekly_inventory_positions_populator'
 
 TaxonConfiguration.destroy_all
 TaxonConfigurationPopulator.populate
@@ -15,3 +16,4 @@ WineVarietalSimilarityScoresPopulator.new(File.dirname(__FILE__) + '/../lib/task
 
 ProductWeeklySalesPopulator.new(File.dirname(__FILE__) + '/../lib/tasks/data/product_weekly_sales.csv').populate
 ProductWeeklySalesForecastsPopulator.new(File.dirname(__FILE__) + '/../lib/tasks/data/forecasted_sales.csv').populate
+ProductWeeklyInventoryPositionsPopulator.new(File.dirname(__FILE__) + '/../lib/tasks/data/product_weekly_inventory_positions.csv').populate

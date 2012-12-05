@@ -11,12 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121203064035) do
-
-  create_table "product_views", :id => false, :force => true do |t|
-    t.string  "variant_id",   :limit => 50
-    t.integer "times_viewed"
-  end
+ActiveRecord::Schema.define(:version => 20121205133025) do
 
   create_table "recommendation_identification_timestamps", :force => true do |t|
     t.datetime "value"
@@ -340,19 +335,6 @@ ActiveRecord::Schema.define(:version => 20121203064035) do
     t.datetime "updated_at",       :null => false
   end
 
-  create_table "spree_product_weekly_sales", :force => true do |t|
-    t.integer  "product_id"
-    t.date     "week_start_date"
-    t.date     "week_end_date"
-    t.integer  "sales_units"
-    t.float    "revenue"
-    t.integer  "target_sales_units"
-    t.float    "target_revenue"
-    t.float    "cost"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-  end
-
   create_table "spree_product_weekly_sales_forecasts", :force => true do |t|
     t.integer  "product_id"
     t.date     "week_start_date"
@@ -554,12 +536,6 @@ ActiveRecord::Schema.define(:version => 20121203064035) do
     t.string   "type"
   end
 
-  create_table "spree_substitutions", :id => false, :force => true do |t|
-    t.integer "looked_up_variant",                                  :null => false
-    t.integer "substitute_variant",                                 :null => false
-    t.decimal "probability",        :precision => 20, :scale => 20
-  end
-
   create_table "spree_tax_categories", :force => true do |t|
     t.string   "name"
     t.string   "description"
@@ -584,19 +560,6 @@ ActiveRecord::Schema.define(:version => 20121203064035) do
   end
 
   add_index "spree_taxon_configurations", ["taxon_id"], :name => "fk_taxon"
-
-  create_table "spree_taxon_weekly_sales", :force => true do |t|
-    t.integer  "taxon_id"
-    t.date     "week_start_date"
-    t.date     "week_end_date"
-    t.integer  "sales_units"
-    t.float    "revenue"
-    t.integer  "target_sales_units"
-    t.float    "target_revenue"
-    t.float    "cost"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-  end
 
   create_table "spree_taxonomies", :force => true do |t|
     t.string   "name",       :null => false
@@ -708,6 +671,20 @@ ActiveRecord::Schema.define(:version => 20121203064035) do
 
   add_index "spree_variants", ["product_id"], :name => "index_spree_variants_on_product_id"
 
+  create_table "spree_weekly_sales", :force => true do |t|
+    t.integer  "child_id"
+    t.integer  "parent_id"
+    t.date     "week_start_date"
+    t.date     "week_end_date"
+    t.integer  "sales_units"
+    t.float    "revenue"
+    t.integer  "target_sales_units"
+    t.float    "target_revenue"
+    t.float    "cost"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
   create_table "spree_zone_members", :force => true do |t|
     t.integer  "zoneable_id"
     t.string   "zoneable_type"
@@ -723,12 +700,6 @@ ActiveRecord::Schema.define(:version => 20121203064035) do
     t.datetime "updated_at",                            :null => false
     t.boolean  "default_tax",        :default => false
     t.integer  "zone_members_count", :default => 0
-  end
-
-  create_table "substitution_behavior", :id => false, :force => true do |t|
-    t.string "looked_for_variant", :limit => 50
-    t.string "bought_variant",     :limit => 50
-    t.string "session_id",         :limit => 50
   end
 
   create_table "wine_type_similarity_scores", :force => true do |t|

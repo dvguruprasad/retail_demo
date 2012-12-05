@@ -1,5 +1,4 @@
 require 'csv'
-require 'spree/admin'
 
 class ProductWeeklySalesPopulator
   def initialize(csv_file)
@@ -7,9 +6,9 @@ class ProductWeeklySalesPopulator
   end
 
   def populate
-    ProductWeeklySales.destroy_all
+    Spree::Admin::ProductWeeklySales.destroy_all
     CSV.foreach(@csv_file) do |line|
-      record = ProductWeeklySales.new
+      record = Spree::Admin::ProductWeeklySales.new
       record.product_id = line[0].to_i
       record.week_start_date = Date.parse(line[1])
       record.week_end_date = Date.parse(line[2])

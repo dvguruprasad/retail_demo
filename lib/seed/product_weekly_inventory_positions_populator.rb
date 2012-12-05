@@ -6,9 +6,9 @@ class ProductWeeklyInventoryPositionsPopulator
   end
 
   def populate
-    ProductWeeklyInventoryPosition.destroy_all
+    Spree::Admin::ProductWeeklyInventoryPosition.destroy_all
     CSV.foreach(@csv_file) do |line|
-      record = ProductWeeklyInventoryPosition.new
+      record = Spree::Admin::ProductWeeklyInventoryPosition.new
       record.product_id = line[0].to_i
       record.week_start_date = Date.parse(line[1])
       record.week_end_date = Date.parse(line[2])

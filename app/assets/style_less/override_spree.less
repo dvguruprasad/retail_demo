@@ -1,0 +1,57 @@
+@import "css3mixin.less";
+
+#header {
+  height: 80px;
+  margin: 0;
+  h1, #logo {
+    position: static;
+    float: left;
+    margin: 0 0 0 10px;
+  }
+  h1 { margin-top: 38px; }
+  #login-nav {
+    margin: 0 1.5em 1em 0;
+    a:hover { color: #fff;   }
+  }
+}
+
+#admin-menu, #sub-menu {
+  position: relative;
+  z-index: 100;
+  ul {  overflow: hidden; }
+  br.clear { display: none;}
+}
+
+#admin-menu {
+  margin-left: 350px;
+  margin-top: -42px;
+  clear: none;
+  border: 1px solid #0095DA;
+  .border-radius(10px, 0, 0, 10px);
+  ul {
+    .border-radius(10px, 0, 0, 10px);
+    li:first-child {   border: 0;   }
+  }
+
+}
+
+#sub-menu {
+  border: 0;
+  .border-radius(0, 0, 0, 7px);
+  padding: 5px;
+  ul li a { margin: 1px 5px;}
+}
+
+#footer {
+  .powered_by {
+    text-align: center;
+    vertical-align: middle;
+    a { display: inline-block; }
+    .logo-aq {
+      padding: 5px;
+      margin-left: 15px;
+      background: #fff;
+    }
+  }
+}
+
